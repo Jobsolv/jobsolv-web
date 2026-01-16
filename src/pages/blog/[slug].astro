@@ -7,8 +7,20 @@ export async function getStaticPaths() {
   const posts = allPosts.filter((post) => !post.data.draft);
 
   return posts.map((post) => {
+    // Ensure slug is always a string, never an array
+    let slugValue: string;
+    if (Array.isArray(post.slug)) {
+      // If slug is an array (shouldn't happen with [slug] route), join it
+      slugValue = post.slug.join('/');
+    } else if (typeof post.slug === 'string') {
+      slugValue = post.slug;
+    } else {
+      // Fallback: use the file path as slug
+      slugValue = String(post.id || post.slug || '');
+    }
+
     return {
-      params: { slug: String(post.slug) },
+      params: { slug: slugValue },
       props: { post },
     };
   });
@@ -17,12 +29,15 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await post.render();
 
+// Ensure slug from params is always a string
+const slug = typeof Astro.params.slug === 'string' ? Astro.params.slug : String(Astro.params.slug || post.slug || '');
+
 // SEO defaults with fallbacks
 const title = post.data.title ? `${post.data.title} | Jobsolv` : "Jobsolv Blog";
 const description = post.data.description || `Read ${post.data.title || "this article"} on the Jobsolv blog for expert job search advice and career insights.`;
 const canonicalPath = post.data.canonical 
   ? new URL(post.data.canonical).pathname 
-  : `/blog/${post.slug}`;
+  : `/blog/${slug}`;
 ---
 
 <BaseLayout
