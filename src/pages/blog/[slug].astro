@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("blog");
+  const posts = allPosts.filter((post) => !post.data.draft);
+
+  return posts.map((post) => {
+    return {
+      params: { slug: String(post.slug) },
+      props: { post },
+    };
+  });
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+// SEO defaults with fallbacks
+const title = post.data.title ? `${post.data.title} | Jobsolv` : "Jobsolv Blog";
+const description = post.data.description || `Read ${post.data.title || "this article"} on the Jobsolv blog for expert job search advice and career insights.`;
+const canonicalPath = post.data.canonical 
+  ? new URL(post.data.canonical).pathname 
+  : `/blog/${post.slug}`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath={canonicalPath}
+>
+  <main>
+    <article>
+      <h1>{post.data.title}</h1>
+      <Content />
+    </article>
+  </main>
+</BaseLayout>
