@@ -1,0 +1,187 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Navigation from "../../components/Navigation.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<BaseLayout
+  title="Jobsolv Software FAQ | Common Questions About the Jobsolv App"
+  description="Get answers to common questions about Jobsolv's AI resume tailoring, job tracker, resume builder, and job board. Learn how the software works and get started today."
+  canonicalPath="/faq"
+>
+  <header>
+    <Navigation />
+  </header>
+
+  <main>
+    <section>
+      <h1>Jobsolv Software FAQ</h1>
+      <p>Common questions about how Jobsolv's software works, what features are available, and how to get started.</p>
+    </section>
+
+    <section>
+      <h2>Getting Started</h2>
+
+      <article>
+        <h2>What is Jobsolv?</h2>
+        <p>
+          Jobsolv is an AI-powered job search platform that helps you find and apply to high-paying remote and hybrid roles. The software includes a smart job board, AI resume tailoring, a free resume builder, and a job tracker to manage your applications. Everything is designed to help you land interviews faster.
+        </p>
+      </article>
+
+      <article>
+        <h2>Is Jobsolv free to use?</h2>
+        <p>
+          Yes, many core features are free, including access to our $100K+ remote job listings, the resume builder, and the job tracker. You can use our credit system or select a plan for advanced features like automatic resume tailoring and application submission.
+        </p>
+      </article>
+
+      <article>
+        <h2>How does the credit system work?</h2>
+        <p>
+          Our credit system lets you use Jobsolv's services flexibly. Each resume tailoring costs 1 credit, and each job application costs 1 credit. Applying for a job with a customized resume costs 2 credits total. You can purchase credits as needed or subscribe to a plan for unlimited access.
+        </p>
+      </article>
+
+      <article>
+        <h2>Who can benefit from using Jobsolv?</h2>
+        <p>
+          Jobsolv is ideal for experienced professionals targeting six-figure remote positions, early-career professionals aiming for a significant salary increase, and recent graduates looking to enter the job market in roles with salaries over $70K. The software adapts to your experience level and career goals.
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Features & Functionality</h2>
+
+      <article>
+        <h2>How does resume tailoring work?</h2>
+        <p>
+          Simply upload your resume and paste a job description. Our AI analyzes the job requirements and automatically tailors your resume to match, optimizing keywords, skills, and formatting to pass ATS filters and impress hiring managers. Each tailored resume is customized for that specific role.
+        </p>
+      </article>
+
+      <article>
+        <h2>How does the resume builder work?</h2>
+        <p>
+          Our free resume builder helps you create a professional, ATS-friendly resume in minutes. It automatically formats your resume to meet ATS standards and optimizes it for keyword matching. You can build your base resume once, then tailor it for each job application.
+        </p>
+      </article>
+
+      <article>
+        <h2>How does the job tracker work?</h2>
+        <p>
+          The job tracker helps you stay organized by tracking all your applications in one place. You can see which applications are pending, which got responses, set reminders, and track your progress. It eliminates the need for spreadsheets and keeps everything organized.
+        </p>
+      </article>
+
+      <article>
+        <h2>Does Jobsolv support remote job searches?</h2>
+        <p>
+          Yes, Jobsolv specializes in connecting you with high-paying remote and hybrid opportunities. Our job board focuses on roles paying over $100K that offer location flexibility. You can filter searches by remote, hybrid, or on-site preferences to find roles that match your needs.
+        </p>
+      </article>
+
+      <article>
+        <h2>Can I filter job searches by salary?</h2>
+        <p>
+          Yes, you can filter our job board by salary range. We specialize in remote and hybrid jobs paying over $100K, and you can set your preferred salary range to see only roles that match your compensation expectations.
+        </p>
+      </article>
+
+      <article>
+        <h2>How can I update my preferences or resume?</h2>
+        <p>
+          You can update your job preferences, resume, and other details anytime through your account settings in the Jobsolv app. For assistance, reach out to us via email at <a href="mailto:hello@jobsolv.com">hello@jobsolv.com</a>, and we'll be happy to help.
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Pricing & Plans</h2>
+
+      <article>
+        <h2>How do I cancel my subscription?</h2>
+        <p>
+          You can cancel your subscription easily through your account settings in the Jobsolv app. We partner with Stripe for secure payment processing and easy cancellation. You can also pause or change your plan to better suit your needs.
+        </p>
+      </article>
+
+      <article>
+        <h2>Is there a referral program?</h2>
+        <p>
+          Yes, our referral program benefits both you and your friends. When you refer someone, they receive a discount on their first month, and you earn a cash reward. Message <a href="mailto:hello@jobsolv.com">hello@jobsolv.com</a> to learn more about the referral program.
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Safety & Data</h2>
+
+      <article>
+        <h2>Is my data secure?</h2>
+        <p>
+          Yes. Jobsolv is based in Austin, Texas, and uses US-based infrastructure. We take data security seriously and never share, sell, or rent your personal information to third parties. Your privacy is our top priority.
+        </p>
+      </article>
+
+      <article>
+        <h2>How does Jobsolv use my data?</h2>
+        <p>
+          Your privacy is our top priority. We do not sell your data and use it solely to assist in your job search. We're committed to keeping your information secure and using it only to help you land your dream job through our software platform.
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Still Have Questions?</h2>
+      <p>
+        Contact us at <a href="mailto:hello@jobsolv.com">hello@jobsolv.com</a> for any questions or support. We're here to help you succeed in your job search journey.
+      </p>
+      <p>
+        Explore our <a href="/features">features</a> to learn more about what Jobsolv offers, or check out our <a href="/features/resume-builder">resume builder</a>, <a href="/features/resume-tailoring">resume tailoring</a>, and <a href="/features/job-tracker">job tracker</a> pages for detailed information.
+      </p>
+    </section>
+  </main>
+
+  <Footer />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Jobsolv?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Jobsolv is an AI-powered job search platform that helps you find and apply to high-paying remote and hybrid roles. The software includes a smart job board, AI resume tailoring, a free resume builder, and a job tracker to manage your applications."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Jobsolv free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, many core features are free, including access to our $100K+ remote job listings, the resume builder, and the job tracker. You can use our credit system or select a plan for advanced features like automatic resume tailoring and application submission."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does resume tailoring work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Simply upload your resume and paste a job description. Our AI analyzes the job requirements and automatically tailors your resume to match, optimizing keywords, skills, and formatting to pass ATS filters and impress hiring managers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my data secure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Jobsolv is based in Austin, Texas, and uses US-based infrastructure. We take data security seriously and never share, sell, or rent your personal information to third parties."
+        }
+      }
+    ]
+  })} />
+</BaseLayout>

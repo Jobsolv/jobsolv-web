@@ -1,11 +1,190 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout
+  title="Jobsolv | AI Resume Tailoring & Job Tracker"
+  description="Land $100K+ remote jobs with Jobsolv's AI resume tailoring, free ATS resume builder, and smart job tracker. Simplify your job search today!"
+  canonicalPath="/"
+>
+  <header>
+    <Navigation />
+  </header>
+
+  <main>
+    <section>
+      <h1>We Turn Your Resume Into a Perfect Match for Any Job — in Seconds</h1>
+      <p>
+        Your resume isn't getting ignored because you're unqualified.<br />
+        It's getting ignored because it doesn't match what the job is looking for. Jobsolv tailors your resume to <strong>each role you apply for</strong>, so it actually gets seen. Paste your resume. Paste the job. Apply with confidence.
+      </p>
+      <a href="https://app.jobsolv.com/">Fix My Resume</a>
+      <img src="/images/hero-software-screen.avif" alt="Job application automation interface" />
+    </section>
+
+    <section>
+      <h2>Where Our Clients are Growing Their Careers</h2>
+      <ul>
+        <li><img src="/images/logo-stripe.svg" alt="Stripe" /></li>
+        <li><img src="/images/logo-google.svg" alt="Google" /></li>
+        <li><img src="/images/logo-samsung.svg" alt="Samsung" /></li>
+        <li><img src="/images/logo-visa.svg" alt="Visa" /></li>
+        <li><img src="/images/logo-spotify.svg" alt="Spotify" /></li>
+        <li><img src="/images/logo-linkedin.svg" alt="LinkedIn" /></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Why Most Applications Fail</h2>
+      <p><strong>Here's what happens behind the scenes:</strong></p>
+      <ul>
+        <li>
+          <img src="/images/icon-75-percent.svg" alt="" />
+          <h3>75%</h3>
+          <p><strong>75% of resumes never reach a human. They're filtered out before anyone reads them.</strong></p>
+        </li>
+        <li>
+          <img src="/images/icon-one-resume.svg" alt="" />
+          <h3>One resume doesn't fit every job</h3>
+          <p>Relevance beats experience every time.</p>
+        </li>
+        <li>
+          <img src="/images/icon-keywords.svg" alt="" />
+          <h3>Guessing keywords doesn't work</h3>
+          <p>Systems score alignment — not effort.</p>
+        </li>
+      </ul>
+      <a href="https://app.jobsolv.com/">Fix My Resume</a>
+    </section>
+
+    <section>
+      <h2>Three Simple Steps. No Learning Curve.</h2>
+      <ol>
+        <li>
+          <h3>Paste Your Resume</h3>
+          <p>Use what you already have. No rebuilding from scratch.</p>
+          <img src="/images/step-1-signup.avif" alt="Job application automation step 1" />
+        </li>
+        <li>
+          <h3>Paste the Job Posting</h3>
+          <p>We extract exactly what the role is looking for.</p>
+          <img src="/images/step-2-maximize.avif" alt="Job application automation step 2" />
+        </li>
+        <li>
+          <h3>Get a Perfect Match</h3>
+          <p>You receive an ATS-optimized resume tailored to that job.</p>
+          <img src="/images/step-3-land-interviews.avif" alt="Job application automation step 3" />
+        </li>
+      </ol>
+      <a href="https://app.jobsolv.com/">Fix My Resume</a>
+    </section>
+
+    <section>
+      <h2>Why Job Seekers Choose Jobsolv</h2>
+      <ul>
+        <li>
+          <img src="/images/icon-instant-resume-optimization.svg" alt="Job application automation" />
+          <h3>Built for Relevance</h3>
+          <p>Every resume is tailored to a specific job — not a template.</p>
+        </li>
+        <li>
+          <img src="/images/icon-effortless-ai-auto-apply.svg" alt="Auto apply jobs" />
+          <h3>ATS-Optimized by Default</h3>
+          <p>Designed to pass automated filters used by hiring systems.</p>
+        </li>
+        <li>
+          <img src="/images/icon-focus-on-what-matters.svg" alt="Auto apply jobs" />
+          <h3>Instant Results</h3>
+          <p>Tailor in seconds instead of rewriting for hours.</p>
+          <a href="https://app.jobsolv.com/">Fix My Resume</a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Success Stories</h2>
+      <p>See why thousands of data & analytics professionals are landing interviews at companies like SpaceX, Netflix, and Visa with Jobsolv.</p>
+      <article>
+        <blockquote>
+          "After my layoff from Silicon Valley Bank, Jobsolv transformed my job search. They revamped my resume, found 200+ targeted roles, and handled applications, turning 4 interviews into 18 within two months. I ultimately landed a new position with a 50% salary increase. Jobsolv gave me peace of mind and saved me countless hours—highly recommend!"
+        </blockquote>
+        <p><strong>- Aiko Yeh</strong></p>
+        <a href="https://www.linkedin.com/in/aikoyeh/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="/success-stories">Read more</a>
+        <img src="/images/testimonial-aiko-yeh.webp" alt="AI resume optimizer testimonial" />
+      </article>
+      <a href="https://app.jobsolv.com/">Fix My Resume</a>
+    </section>
+
+    <section>
+      <h2>Every Resume, Tailored for Maximum Impact</h2>
+      <p>Our interview-winning resume format passes ATS filters and highlights your data & analytics skills—so hiring managers take notice.</p>
+      <img src="/images/pass-ats-image.avif" alt="Automatically apply for jobs" />
+      <ul>
+        <li>
+          <img src="/images/icon-instant-resume-optimization.svg" alt="Icon" />
+          <h3>Precision Resume Tailoring</h3>
+          <p>Matches your experience to what the job actually asks for.</p>
+        </li>
+        <li>
+          <img src="/images/icon-data-driven-results.svg" alt="Icon" />
+          <h3>Clear Keyword Alignment</h3>
+          <p>So your resume ranks where it matters.</p>
+        </li>
+        <li>
+          <img src="/images/icon-secure-private.svg" alt="Icon" />
+          <h3>Your Resume — Enhanced</h3>
+          <p>Same experience. Stronger signal.</p>
+        </li>
+      </ul>
+      <a href="https://app.jobsolv.com/">Fix My Resume</a>
+    </section>
+
+    <section>
+      <h2>Job Searching Shouldn't Be a Full-Time Job</h2>
+      <p>The traditional job search is broken—manual applications, ATS rejections, and hours of wasted time.</p>
+      <ul>
+        <li>
+          <img src="/images/icon-say-goodbye-to-rejections.svg" alt="Automatically apply for jobs" />
+          <h3>Stop Sending Generic Resumes</h3>
+          <p>Every data job is different. Your resume should be too. Get a tailored version for each role in minutes.</p>
+        </li>
+        <li>
+          <img src="/images/icon-save-time-every-week.svg" alt="Automatically apply for jobs" />
+          <h3>Find + Apply Faster</h3>
+          <p>Tailor each application in seconds.</p>
+        </li>
+        <li>
+          <img src="/images/icon-tailored-matches.svg" alt="Automatically apply for jobs" />
+          <h3>Get Better Results</h3>
+          <p>Fewer applications. Higher response rates.</p>
+        </li>
+      </ul>
+      <a href="https://app.jobsolv.com/">Fix My Resume</a>
+    </section>
+
+    <section>
+      <h2>Stop Sending Resumes That Don't Match</h2>
+      <p>
+        Jobsolv fixes the one thing standing between you and interviews: resume relevance.<br /><br />
+        No signup required.<br />
+        No credit card required.<br />
+        See your tailored resume instantly.
+      </p>
+      <a href="https://app.jobsolv.com/">Fix My Resume</a>
+      <ul>
+        <li><img src="/images/logo-google-cta.svg" alt="Google" /></li>
+        <li><img src="/images/logo-calm.svg" alt="Calm" /></li>
+        <li><img src="/images/logo-apple.svg" alt="Apple" /></li>
+        <li><img src="/images/logo-indeed.svg" alt="Indeed" /></li>
+        <li><img src="/images/logo-amazon.svg" alt="Amazon" /></li>
+        <li><img src="/images/logo-spacex.svg" alt="SpaceX" /></li>
+      </ul>
+      <img src="/images/rocket.svg" alt="Resume tailor AI" />
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

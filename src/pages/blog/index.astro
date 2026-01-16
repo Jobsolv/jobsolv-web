@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("blog");
+const posts = allPosts
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => {
+    const dateA = a.data.pubDate?.getTime() || 0;
+    const dateB = b.data.pubDate?.getTime() || 0;
+    return dateB - dateA;
+  });
+---
+
+<BaseLayout
+  title="Jobsolv Blog | Job Search Guides & Career Advice"
+  description="Explore Jobsolv's blog for expert job search guides, AI resume advice, career resources, and insights to land your next remote job faster."
+  canonicalPath="/blog"
+>
+  <main>
+    <h1>Jobsolv Blog</h1>
+    <ul>
+      {posts.map((post) => (
+        <li>
+          <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+        </li>
+      ))}
+    </ul>
+  </main>
+</BaseLayout>

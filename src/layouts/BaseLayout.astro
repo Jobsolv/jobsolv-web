@@ -1,0 +1,59 @@
+---
+const {
+  title = "Jobsolv",
+  description = "",
+  canonicalPath,
+  noindex = false,
+} = Astro.props;
+
+const canonicalUrl =
+  canonicalPath
+    ? new URL(canonicalPath, Astro.site).toString()
+    : Astro.url.toString();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google Tag Manager -->
+    <!-- GTM Container ID: GTM-WZVND7H -->
+    <!-- AdSense and other tracking tags should be configured through GTM, not directly in code -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WZVND7H');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Termly Consent Banner -->
+    <!-- Manages cookie consent and privacy compliance -->
+    <!-- Preference center link is available in the footer on all pages -->
+    <script src="https://app.termly.io/resource-blocker/6b3eada3-e0f7-47d6-a58a-7e979f89a224?autoBlock=on"></script>
+
+    <title>{title}</title>
+
+    {description && (
+      <meta name="description" content={description} />
+    )}
+
+    <link rel="canonical" href={canonicalUrl} />
+
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZVND7H"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <slot />
+  </body>
+</html>

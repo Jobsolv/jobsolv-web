@@ -1,46 +1,87 @@
-# Astro Starter Kit: Basics
+# Jobsolv Web
 
-```sh
-npm create astro@latest -- --template basics
+The official website for [Jobsolv](https://www.jobsolv.com) - an AI-powered resume tailoring and job tracking platform.
+
+## 🚀 Tech Stack
+
+- **[Astro](https://astro.build/)** - Static site generator
+- **[MDX](https://mdxjs.com/)** - Markdown with JSX support for blog content
+- **TypeScript** - Type safety
+
+## 📁 Project Structure
+
+```
+jobsolv-web/
+├─ src/
+│  ├─ pages/          # Routes and pages
+│  ├─ layouts/         # Page layouts
+│  ├─ components/      # Reusable components
+│  ├─ content/         # Content collections (blog posts)
+│  ├─ assets/          # Images and other assets
+│  └─ utils/           # Utility functions
+├─ public/             # Static assets
+├─ astro.config.mjs    # Astro configuration
+├─ package.json
+└─ tsconfig.json
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🛠️ Getting Started
 
-## 🚀 Project Structure
+### Prerequisites
 
-Inside of your Astro project, you'll see the following folders and files:
+- Node.js 18+ 
+- npm or yarn
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+### Installation
+
+```bash
+npm install
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+### Development
 
-## 🧞 Commands
+Start the development server:
 
-All commands are run from the root of the project, from a terminal:
+```bash
+npm run dev
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Visit `http://localhost:4321` to view your site.
 
-## 👀 Want to learn more?
+### Build
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Build the site for production:
+
+```bash
+npm run build
+```
+
+### Preview
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## 📝 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run astro` - Run Astro CLI commands
+
+## 🌐 Site Configuration
+
+The site is configured to deploy to `https://www.jobsolv.com`. This is set in `astro.config.mjs`.
+
+## 📚 Content
+
+- **Blog posts**: Located in `src/content/blog/`
+- **Pages**: Located in `src/pages/`
+- **Components**: Located in `src/components/`
+
+## 🔧 Integrations
+
+- `@astrojs/mdx` - MDX support for blog content
+- `@astrojs/sitemap` - Automatic sitemap generation
